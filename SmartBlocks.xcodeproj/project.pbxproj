@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		822DEE0D172810FD009F9B53 /* Schema.m in Sources */ = {isa = PBXBuildFile; fileRef = 822DEE0C172810FD009F9B53 /* Schema.m */; };
+		822DEE101728153A009F9B53 /* SchemaText.m in Sources */ = {isa = PBXBuildFile; fileRef = 822DEE0F1728153A009F9B53 /* SchemaText.m */; };
+		8245EC21172969AA00A95E2A /* NSData+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8245EC20172969AA00A95E2A /* NSData+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		82546075172C31F10094B67C /* SchemaListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 82546074172C31F10094B67C /* SchemaListVC.m */; };
+		8254607E172C34980094B67C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8254607D172C34980094B67C /* OpenGLES.framework */; };
+		825460A7172FCB400094B67C /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 825460A3172FCB400094B67C /* TapkuLibrary.bundle */; };
+		825460B0172FCB6A0094B67C /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 825460AB172FCB400094B67C /* libTapkuLibrary.a */; };
+		825460B2172FCB760094B67C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825460B1172FCB760094B67C /* MapKit.framework */; };
+		82D86E741726A5110042F679 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D86E731726A5110042F679 /* UIKit.framework */; };
+		82D86E761726A5110042F679 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D86E751726A5110042F679 /* Foundation.framework */; };
+		82D86E781726A5110042F679 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D86E771726A5110042F679 /* CoreGraphics.framework */; };
+		82D86E7E1726A5110042F679 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82D86E7C1726A5110042F679 /* InfoPlist.strings */; };
+		82D86E801726A5110042F679 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D86E7F1726A5110042F679 /* main.m */; };
+		82D86E841726A5120042F679 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D86E831726A5120042F679 /* AppDelegate.m */; };
+		82D86E861726A5120042F679 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D86E851726A5120042F679 /* Default.png */; };
+		82D86E881726A5120042F679 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D86E871726A5120042F679 /* Default@2x.png */; };
+		82D86E8A1726A5120042F679 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D86E891726A5120042F679 /* Default-568h@2x.png */; };
+		82D86E8D1726A5120042F679 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D86E8B1726A5120042F679 /* MainStoryboard.storyboard */; };
+		82D86E9A1726A7470042F679 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D86E991726A7470042F679 /* HomeVC.m */; };
+		82D86EB11726B2E80042F679 /* Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D86EB01726B2E80042F679 /* Extension.m */; };
+		82D86EB81726B3B00042F679 /* DataTransferOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D86EB41726B3B00042F679 /* DataTransferOperation.m */; };
+		82D86EB91726B3B00042F679 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D86EB71726B3B00042F679 /* DownloadManager.m */; };
+		82D86EBC1726B5130042F679 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D86EBB1726B5130042F679 /* User.m */; };
+		82D86EC01726B57B0042F679 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D86EBF1726B57B0042F679 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		82D86EDB1726BE8F0042F679 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 82D86ED81726BE8F0042F679 /* SVProgressHUD.bundle */; };
+		82D86EDC1726BE8F0042F679 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D86EDA1726BE8F0042F679 /* SVProgressHUD.m */; };
+		82D86EDE1726BE9C0042F679 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D86EDD1726BE9C0042F679 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		825460AA172FCB400094B67C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 825460A4172FCB400094B67C /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+		825460AC172FCB400094B67C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 825460A4172FCB400094B67C /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B45DDF1134C736600D24C1A;
+			remoteInfo = LogicTests;
+		};
+		825460AE172FCB5A0094B67C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 825460A4172FCB400094B67C /* TapkuLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		822DEE0B172810FD009F9B53 /* Schema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schema.h; sourceTree = "<group>"; };
+		822DEE0C172810FD009F9B53 /* Schema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schema.m; sourceTree = "<group>"; };
+		822DEE0E1728153A009F9B53 /* SchemaText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaText.h; sourceTree = "<group>"; };
+		822DEE0F1728153A009F9B53 /* SchemaText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaText.m; sourceTree = "<group>"; };
+		8245EC1F172969AA00A95E2A /* NSData+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Additions.h"; sourceTree = "<group>"; };
+		8245EC20172969AA00A95E2A /* NSData+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Additions.m"; sourceTree = "<group>"; };
+		8245EC41172C1F1F00A95E2A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		82546073172C31F10094B67C /* SchemaListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaListVC.h; sourceTree = "<group>"; };
+		82546074172C31F10094B67C /* SchemaListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaListVC.m; sourceTree = "<group>"; };
+		8254607D172C34980094B67C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		825460A3172FCB400094B67C /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = SmartBlocks/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
+		825460A4172FCB400094B67C /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = SmartBlocks/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
+		825460B1172FCB760094B67C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		82D86E701726A5110042F679 /* SmartBlocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBlocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		82D86E731726A5110042F679 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		82D86E751726A5110042F679 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		82D86E771726A5110042F679 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		82D86E7B1726A5110042F679 /* SmartBlocks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmartBlocks-Info.plist"; sourceTree = "<group>"; };
+		82D86E7D1726A5110042F679 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		82D86E7F1726A5110042F679 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		82D86E811726A5120042F679 /* SmartBlocks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartBlocks-Prefix.pch"; sourceTree = "<group>"; };
+		82D86E821726A5120042F679 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		82D86E831726A5120042F679 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		82D86E851726A5120042F679 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		82D86E871726A5120042F679 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		82D86E891726A5120042F679 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		82D86E8C1726A5120042F679 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		82D86E981726A7470042F679 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		82D86E991726A7470042F679 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		82D86EAF1726B2E80042F679 /* Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Extension.h; sourceTree = "<group>"; };
+		82D86EB01726B2E80042F679 /* Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Extension.m; sourceTree = "<group>"; };
+		82D86EB31726B3B00042F679 /* DataTransferOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTransferOperation.h; sourceTree = "<group>"; };
+		82D86EB41726B3B00042F679 /* DataTransferOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTransferOperation.m; sourceTree = "<group>"; };
+		82D86EB51726B3B00042F679 /* DataTransferProtocolDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTransferProtocolDelegate.h; sourceTree = "<group>"; };
+		82D86EB61726B3B00042F679 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		82D86EB71726B3B00042F679 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		82D86EBA1726B5130042F679 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		82D86EBB1726B5130042F679 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		82D86EBE1726B57B0042F679 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		82D86EBF1726B57B0042F679 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		82D86ED81726BE8F0042F679 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		82D86ED91726BE8F0042F679 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		82D86EDA1726BE8F0042F679 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		82D86EDD1726BE9C0042F679 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82D86E6D1726A5110042F679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				825460B2172FCB760094B67C /* MapKit.framework in Frameworks */,
+				825460B0172FCB6A0094B67C /* libTapkuLibrary.a in Frameworks */,
+				8254607E172C34980094B67C /* OpenGLES.framework in Frameworks */,
+				82D86EDE1726BE9C0042F679 /* QuartzCore.framework in Frameworks */,
+				82D86E741726A5110042F679 /* UIKit.framework in Frameworks */,
+				82D86E761726A5110042F679 /* Foundation.framework in Frameworks */,
+				82D86E781726A5110042F679 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		825460A5172FCB400094B67C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				825460AB172FCB400094B67C /* libTapkuLibrary.a */,
+				825460AD172FCB400094B67C /* LogicTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82D86E671726A5110042F679 = {
+			isa = PBXGroup;
+			children = (
+				82D86E791726A5110042F679 /* SmartBlocks */,
+				82D86E721726A5110042F679 /* Frameworks */,
+				82D86E711726A5110042F679 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		82D86E711726A5110042F679 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82D86E701726A5110042F679 /* SmartBlocks.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82D86E721726A5110042F679 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				825460B1172FCB760094B67C /* MapKit.framework */,
+				825460A3172FCB400094B67C /* TapkuLibrary.bundle */,
+				825460A4172FCB400094B67C /* TapkuLibrary.xcodeproj */,
+				8254607D172C34980094B67C /* OpenGLES.framework */,
+				8245EC41172C1F1F00A95E2A /* AssetsLibrary.framework */,
+				82D86EDD1726BE9C0042F679 /* QuartzCore.framework */,
+				82D86E731726A5110042F679 /* UIKit.framework */,
+				82D86E751726A5110042F679 /* Foundation.framework */,
+				82D86E771726A5110042F679 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82D86E791726A5110042F679 /* SmartBlocks */ = {
+			isa = PBXGroup;
+			children = (
+				82D86EDF1726BFC10042F679 /* Librairies */,
+				82D86EB21726B38F0042F679 /* DataTransfer */,
+				82D86EAE1726B2CF0042F679 /* Helper */,
+				82D86E971726A7210042F679 /* Controller */,
+				82D86E961726A71B0042F679 /* Model */,
+				82D86E821726A5120042F679 /* AppDelegate.h */,
+				82D86E831726A5120042F679 /* AppDelegate.m */,
+				82D86E8B1726A5120042F679 /* MainStoryboard.storyboard */,
+				82D86E7A1726A5110042F679 /* Supporting Files */,
+			);
+			path = SmartBlocks;
+			sourceTree = "<group>";
+		};
+		82D86E7A1726A5110042F679 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				82D86E7B1726A5110042F679 /* SmartBlocks-Info.plist */,
+				82D86E7C1726A5110042F679 /* InfoPlist.strings */,
+				82D86E7F1726A5110042F679 /* main.m */,
+				82D86E811726A5120042F679 /* SmartBlocks-Prefix.pch */,
+				82D86E851726A5120042F679 /* Default.png */,
+				82D86E871726A5120042F679 /* Default@2x.png */,
+				82D86E891726A5120042F679 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		82D86E961726A71B0042F679 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82D86EBA1726B5130042F679 /* User.h */,
+				82D86EBB1726B5130042F679 /* User.m */,
+				822DEE0B172810FD009F9B53 /* Schema.h */,
+				822DEE0C172810FD009F9B53 /* Schema.m */,
+				822DEE0E1728153A009F9B53 /* SchemaText.h */,
+				822DEE0F1728153A009F9B53 /* SchemaText.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		82D86E971726A7210042F679 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82D86E981726A7470042F679 /* HomeVC.h */,
+				82D86E991726A7470042F679 /* HomeVC.m */,
+				82546073172C31F10094B67C /* SchemaListVC.h */,
+				82546074172C31F10094B67C /* SchemaListVC.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		82D86EAE1726B2CF0042F679 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8245EC1F172969AA00A95E2A /* NSData+Additions.h */,
+				8245EC20172969AA00A95E2A /* NSData+Additions.m */,
+				82D86EAF1726B2E80042F679 /* Extension.h */,
+				82D86EB01726B2E80042F679 /* Extension.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		82D86EB21726B38F0042F679 /* DataTransfer */ = {
+			isa = PBXGroup;
+			children = (
+				82D86EB31726B3B00042F679 /* DataTransferOperation.h */,
+				82D86EB41726B3B00042F679 /* DataTransferOperation.m */,
+				82D86EB51726B3B00042F679 /* DataTransferProtocolDelegate.h */,
+				82D86EB61726B3B00042F679 /* DownloadManager.h */,
+				82D86EB71726B3B00042F679 /* DownloadManager.m */,
+			);
+			name = DataTransfer;
+			sourceTree = "<group>";
+		};
+		82D86EBD1726B5670042F679 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				82D86EBE1726B57B0042F679 /* JSONKit.h */,
+				82D86EBF1726B57B0042F679 /* JSONKit.m */,
+			);
+			name = Json;
+			sourceTree = "<group>";
+		};
+		82D86ED71726BE8F0042F679 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				82D86ED81726BE8F0042F679 /* SVProgressHUD.bundle */,
+				82D86ED91726BE8F0042F679 /* SVProgressHUD.h */,
+				82D86EDA1726BE8F0042F679 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		82D86EDF1726BFC10042F679 /* Librairies */ = {
+			isa = PBXGroup;
+			children = (
+				82D86EBD1726B5670042F679 /* Json */,
+				82D86ED71726BE8F0042F679 /* SVProgressHUD */,
+			);
+			name = Librairies;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		82D86E6F1726A5110042F679 /* SmartBlocks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82D86E931726A5120042F679 /* Build configuration list for PBXNativeTarget "SmartBlocks" */;
+			buildPhases = (
+				82D86E6C1726A5110042F679 /* Sources */,
+				82D86E6D1726A5110042F679 /* Frameworks */,
+				82D86E6E1726A5110042F679 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				825460AF172FCB5A0094B67C /* PBXTargetDependency */,
+			);
+			name = SmartBlocks;
+			productName = SmartBlocks;
+			productReference = 82D86E701726A5110042F679 /* SmartBlocks.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		82D86E681726A5110042F679 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Cédric Eugeni";
+			};
+			buildConfigurationList = 82D86E6B1726A5110042F679 /* Build configuration list for PBXProject "SmartBlocks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 82D86E671726A5110042F679;
+			productRefGroup = 82D86E711726A5110042F679 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 825460A5172FCB400094B67C /* Products */;
+					ProjectRef = 825460A4172FCB400094B67C /* TapkuLibrary.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				82D86E6F1726A5110042F679 /* SmartBlocks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		825460AB172FCB400094B67C /* libTapkuLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTapkuLibrary.a;
+			remoteRef = 825460AA172FCB400094B67C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		825460AD172FCB400094B67C /* LogicTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LogicTests.octest;
+			remoteRef = 825460AC172FCB400094B67C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		82D86E6E1726A5110042F679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82D86E7E1726A5110042F679 /* InfoPlist.strings in Resources */,
+				82D86E861726A5120042F679 /* Default.png in Resources */,
+				82D86E881726A5120042F679 /* Default@2x.png in Resources */,
+				82D86E8A1726A5120042F679 /* Default-568h@2x.png in Resources */,
+				82D86E8D1726A5120042F679 /* MainStoryboard.storyboard in Resources */,
+				82D86EDB1726BE8F0042F679 /* SVProgressHUD.bundle in Resources */,
+				825460A7172FCB400094B67C /* TapkuLibrary.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		82D86E6C1726A5110042F679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82D86E801726A5110042F679 /* main.m in Sources */,
+				82D86E841726A5120042F679 /* AppDelegate.m in Sources */,
+				82D86E9A1726A7470042F679 /* HomeVC.m in Sources */,
+				82D86EB11726B2E80042F679 /* Extension.m in Sources */,
+				82D86EB81726B3B00042F679 /* DataTransferOperation.m in Sources */,
+				82D86EB91726B3B00042F679 /* DownloadManager.m in Sources */,
+				82D86EBC1726B5130042F679 /* User.m in Sources */,
+				82D86EC01726B57B0042F679 /* JSONKit.m in Sources */,
+				82D86EDC1726BE8F0042F679 /* SVProgressHUD.m in Sources */,
+				822DEE0D172810FD009F9B53 /* Schema.m in Sources */,
+				822DEE101728153A009F9B53 /* SchemaText.m in Sources */,
+				8245EC21172969AA00A95E2A /* NSData+Additions.m in Sources */,
+				82546075172C31F10094B67C /* SchemaListVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		825460AF172FCB5A0094B67C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TapkuLibrary;
+			targetProxy = 825460AE172FCB5A0094B67C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		82D86E7C1726A5110042F679 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82D86E7D1726A5110042F679 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		82D86E8B1726A5120042F679 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82D86E8C1726A5120042F679 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		82D86E911726A5120042F679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		82D86E921726A5120042F679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		82D86E941726A5120042F679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartBlocks/SmartBlocks-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$SRCROOT/SmartBlocks/src/**";
+				INFOPLIST_FILE = "SmartBlocks/SmartBlocks-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		82D86E951726A5120042F679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartBlocks/SmartBlocks-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$SRCROOT/SmartBlocks/src/**";
+				INFOPLIST_FILE = "SmartBlocks/SmartBlocks-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		82D86E6B1726A5110042F679 /* Build configuration list for PBXProject "SmartBlocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82D86E911726A5120042F679 /* Debug */,
+				82D86E921726A5120042F679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82D86E931726A5120042F679 /* Build configuration list for PBXNativeTarget "SmartBlocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82D86E941726A5120042F679 /* Debug */,
+				82D86E951726A5120042F679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 82D86E681726A5110042F679 /* Project object */;
+}
