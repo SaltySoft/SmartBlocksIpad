@@ -15,12 +15,12 @@
 #import "SchemaText.h"
 #import "User.h"
 #import "SVProgressHUD.h"
+#import "DrawingVC.h"
 
 @interface SchemaListVC : UIViewController <DataTransferProtocolDelegate, TKCoverflowViewDataSource, TKCoverflowViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray    *schemas;
 @property (nonatomic, strong) TKCoverflowView   *coverflow;
-
 
 @property (nonatomic, strong) UILabel           *label;
 

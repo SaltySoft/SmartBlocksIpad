@@ -18,6 +18,7 @@
 @synthesize coverflow;
 @synthesize label;
 
+#pragma mark - Life Cycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,11 +38,6 @@
 	self.view = [[UIView alloc] initWithFrame:rect];
 	
 	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	
-//	CAGradientLayer *gradient = [CAGradientLayer layer];
-//    gradient.frame = self.coverflow.frame;
-//    gradient.colors = [NSArray arrayWithObjects:[[UIColor whiteColor] CGColor], [[UIColor blackColor] CGColor], nil];
-//    [self.view.layer addSublayer:gradient];
     
     
 	self.coverflow = [[TKCoverflowView alloc] initWithFrame:self.view.bounds deleclerationRate:UIScrollViewDecelerationRateFast];
@@ -85,6 +81,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc
+{
+    self.schemas = nil;
+    self.coverflow = nil;
+    self.label = nil;
+}
+
 #pragma mark - Tapku CoverFlow Delegate Datasource
 
 - (NSInteger) numberOfCoversInCoverflowView:(TKCoverflowView *)coverflowView
@@ -117,8 +120,7 @@
 
 - (void)coverflowView:(TKCoverflowView *)coverflowView coverAtIndexWasTappedInFront:(NSInteger)index tapCount:(NSInteger)tapCount
 {
-    NSLog(@"test");
-#warning here navigate to draw page
+    [self performSegueWithIdentifier:@"goToDrawingviewSegue" sender:self];
 }
 
 - (void)coverflowView:(TKCoverflowView *)coverflowView coverAtIndexWasBroughtToFront:(NSInteger)index
@@ -150,6 +152,16 @@
     [self.coverflow reloadData];
     
     label.text = [[schemas objectAtIndex:0] name];
+}
+
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    Schema *schema = [schemas objectAtIndex:coverflow.currentCoverIndex];
+    DrawingVC *destinationController = (DrawingVC *)[segue destinationViewController];
+    
+    destinationController.schema = schema;
 }
 
 @end

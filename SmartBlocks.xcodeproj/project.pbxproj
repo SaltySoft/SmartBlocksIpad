@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		822DEE0D172810FD009F9B53 /* Schema.m in Sources */ = {isa = PBXBuildFile; fileRef = 822DEE0C172810FD009F9B53 /* Schema.m */; };
 		822DEE101728153A009F9B53 /* SchemaText.m in Sources */ = {isa = PBXBuildFile; fileRef = 822DEE0F1728153A009F9B53 /* SchemaText.m */; };
+		8233F7BC17316D90009CA9DC /* DrawingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7BB17316D90009CA9DC /* DrawingVC.m */; };
+		8233F7CE17316ED3009CA9DC /* UIColor+GetHSB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7C117316ED3009CA9DC /* UIColor+GetHSB.m */; };
+		8233F7CF17316ED3009CA9DC /* ILView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7C317316ED3009CA9DC /* ILView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8233F7D017316ED3009CA9DC /* ILSaturationBrightnessPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7C517316ED3009CA9DC /* ILSaturationBrightnessPickerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8233F7D117316ED3009CA9DC /* ILHuePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7C717316ED3009CA9DC /* ILHuePickerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8233F7D217316ED3009CA9DC /* ILColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7C917316ED3009CA9DC /* ILColorPickerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8233F7D317316ED3009CA9DC /* ILColorPickerDualExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7CB17316ED3009CA9DC /* ILColorPickerDualExampleController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8233F7D417316ED3009CA9DC /* ILColorPickerDualExampleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8233F7CC17316ED3009CA9DC /* ILColorPickerDualExampleController.xib */; };
+		8233F7D9173172A6009CA9DC /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7D8173172A6009CA9DC /* DrawView.m */; };
 		8245EC21172969AA00A95E2A /* NSData+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8245EC20172969AA00A95E2A /* NSData+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		82546075172C31F10094B67C /* SchemaListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 82546074172C31F10094B67C /* SchemaListVC.m */; };
 		8254607E172C34980094B67C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8254607D172C34980094B67C /* OpenGLES.framework */; };
@@ -65,6 +74,25 @@
 		822DEE0C172810FD009F9B53 /* Schema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schema.m; sourceTree = "<group>"; };
 		822DEE0E1728153A009F9B53 /* SchemaText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaText.h; sourceTree = "<group>"; };
 		822DEE0F1728153A009F9B53 /* SchemaText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemaText.m; sourceTree = "<group>"; };
+		8233F7BA17316D90009CA9DC /* DrawingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingVC.h; sourceTree = "<group>"; };
+		8233F7BB17316D90009CA9DC /* DrawingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingVC.m; sourceTree = "<group>"; };
+		8233F7BF17316E83009CA9DC /* DrawingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingProtocol.h; sourceTree = "<group>"; };
+		8233F7C017316ED3009CA9DC /* UIColor+GetHSB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GetHSB.h"; sourceTree = "<group>"; };
+		8233F7C117316ED3009CA9DC /* UIColor+GetHSB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GetHSB.m"; sourceTree = "<group>"; };
+		8233F7C217316ED3009CA9DC /* ILView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILView.h; sourceTree = "<group>"; };
+		8233F7C317316ED3009CA9DC /* ILView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILView.m; sourceTree = "<group>"; };
+		8233F7C417316ED3009CA9DC /* ILSaturationBrightnessPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSaturationBrightnessPickerView.h; sourceTree = "<group>"; };
+		8233F7C517316ED3009CA9DC /* ILSaturationBrightnessPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILSaturationBrightnessPickerView.m; sourceTree = "<group>"; };
+		8233F7C617316ED3009CA9DC /* ILHuePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILHuePickerView.h; sourceTree = "<group>"; };
+		8233F7C717316ED3009CA9DC /* ILHuePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILHuePickerView.m; sourceTree = "<group>"; };
+		8233F7C817316ED3009CA9DC /* ILColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILColorPickerView.h; sourceTree = "<group>"; };
+		8233F7C917316ED3009CA9DC /* ILColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILColorPickerView.m; sourceTree = "<group>"; };
+		8233F7CA17316ED3009CA9DC /* ILColorPickerDualExampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILColorPickerDualExampleController.h; sourceTree = "<group>"; };
+		8233F7CB17316ED3009CA9DC /* ILColorPickerDualExampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILColorPickerDualExampleController.m; sourceTree = "<group>"; };
+		8233F7CC17316ED3009CA9DC /* ILColorPickerDualExampleController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ILColorPickerDualExampleController.xib; sourceTree = "<group>"; };
+		8233F7CD17316ED3009CA9DC /* ColorPickedProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickedProtocol.h; sourceTree = "<group>"; };
+		8233F7D7173172A6009CA9DC /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		8233F7D8173172A6009CA9DC /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		8245EC1F172969AA00A95E2A /* NSData+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Additions.h"; sourceTree = "<group>"; };
 		8245EC20172969AA00A95E2A /* NSData+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Additions.m"; sourceTree = "<group>"; };
 		8245EC41172C1F1F00A95E2A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -125,6 +153,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8233F7BE17316E6D009CA9DC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8233F7BF17316E83009CA9DC /* DrawingProtocol.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		8233F7D517316EDA009CA9DC /* Color Picker */ = {
+			isa = PBXGroup;
+			children = (
+				8233F7C017316ED3009CA9DC /* UIColor+GetHSB.h */,
+				8233F7C117316ED3009CA9DC /* UIColor+GetHSB.m */,
+				8233F7C217316ED3009CA9DC /* ILView.h */,
+				8233F7C317316ED3009CA9DC /* ILView.m */,
+				8233F7C417316ED3009CA9DC /* ILSaturationBrightnessPickerView.h */,
+				8233F7C517316ED3009CA9DC /* ILSaturationBrightnessPickerView.m */,
+				8233F7C617316ED3009CA9DC /* ILHuePickerView.h */,
+				8233F7C717316ED3009CA9DC /* ILHuePickerView.m */,
+				8233F7C817316ED3009CA9DC /* ILColorPickerView.h */,
+				8233F7C917316ED3009CA9DC /* ILColorPickerView.m */,
+				8233F7CA17316ED3009CA9DC /* ILColorPickerDualExampleController.h */,
+				8233F7CB17316ED3009CA9DC /* ILColorPickerDualExampleController.m */,
+				8233F7CC17316ED3009CA9DC /* ILColorPickerDualExampleController.xib */,
+				8233F7CD17316ED3009CA9DC /* ColorPickedProtocol.h */,
+			);
+			name = "Color Picker";
+			sourceTree = "<group>";
+		};
+		8233F7D617317292009CA9DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8233F7D7173172A6009CA9DC /* DrawView.h */,
+				8233F7D8173172A6009CA9DC /* DrawView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		825460A5172FCB400094B67C /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +236,8 @@
 		82D86E791726A5110042F679 /* SmartBlocks */ = {
 			isa = PBXGroup;
 			children = (
+				8233F7D617317292009CA9DC /* View */,
+				8233F7BE17316E6D009CA9DC /* Protocols */,
 				82D86EDF1726BFC10042F679 /* Librairies */,
 				82D86EB21726B38F0042F679 /* DataTransfer */,
 				82D86EAE1726B2CF0042F679 /* Helper */,
@@ -217,6 +285,8 @@
 				82D86E991726A7470042F679 /* HomeVC.m */,
 				82546073172C31F10094B67C /* SchemaListVC.h */,
 				82546074172C31F10094B67C /* SchemaListVC.m */,
+				8233F7BA17316D90009CA9DC /* DrawingVC.h */,
+				8233F7BB17316D90009CA9DC /* DrawingVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -266,6 +336,7 @@
 		82D86EDF1726BFC10042F679 /* Librairies */ = {
 			isa = PBXGroup;
 			children = (
+				8233F7D517316EDA009CA9DC /* Color Picker */,
 				82D86EBD1726B5670042F679 /* Json */,
 				82D86ED71726BE8F0042F679 /* SVProgressHUD */,
 			);
@@ -354,6 +425,7 @@
 				82D86E8D1726A5120042F679 /* MainStoryboard.storyboard in Resources */,
 				82D86EDB1726BE8F0042F679 /* SVProgressHUD.bundle in Resources */,
 				825460A7172FCB400094B67C /* TapkuLibrary.bundle in Resources */,
+				8233F7D417316ED3009CA9DC /* ILColorPickerDualExampleController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +449,14 @@
 				822DEE101728153A009F9B53 /* SchemaText.m in Sources */,
 				8245EC21172969AA00A95E2A /* NSData+Additions.m in Sources */,
 				82546075172C31F10094B67C /* SchemaListVC.m in Sources */,
+				8233F7BC17316D90009CA9DC /* DrawingVC.m in Sources */,
+				8233F7CE17316ED3009CA9DC /* UIColor+GetHSB.m in Sources */,
+				8233F7CF17316ED3009CA9DC /* ILView.m in Sources */,
+				8233F7D017316ED3009CA9DC /* ILSaturationBrightnessPickerView.m in Sources */,
+				8233F7D117316ED3009CA9DC /* ILHuePickerView.m in Sources */,
+				8233F7D217316ED3009CA9DC /* ILColorPickerView.m in Sources */,
+				8233F7D317316ED3009CA9DC /* ILColorPickerDualExampleController.m in Sources */,
+				8233F7D9173172A6009CA9DC /* DrawView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
