@@ -118,12 +118,12 @@
     
 	drawLastPoint = [touch locationInView:self];
     
-//    if (self.tool == 0)
-//        [self.delegate drawingBeganWithTool:self.tool andSize:self.sizeBrush andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:drawLastPoint.x andCoordY:drawLastPoint.y];
-//    else if (self.tool == 1)
-//        [self.delegate drawingBeganWithTool:self.tool andSize:self.sizeLine andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:drawLastPoint.x andCoordY:drawLastPoint.y];
-//    else
-//        [self.delegate drawingBeganWithTool:self.tool andSize:self.sizeRectangle andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:drawLastPoint.x andCoordY:drawLastPoint.y];
+    if (self.tool == 0)
+        [self.delegate drawingBeganWithTool:self.tool andSize:self.sizeBrush andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:drawLastPoint.x andCoordY:drawLastPoint.y];
+    else if (self.tool == 1)
+        [self.delegate drawingBeganWithTool:self.tool andSize:self.sizeLine andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:drawLastPoint.x andCoordY:drawLastPoint.y];
+    else
+        [self.delegate drawingBeganWithTool:self.tool andSize:self.sizeRectangle andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:drawLastPoint.x andCoordY:drawLastPoint.y];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -152,7 +152,7 @@
         
         UIGraphicsEndImageContext();
         
-        //[self.delegate drawingContinueWithTool:self.tool andSize:self.sizeBrush andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:drawLastPoint.x andCoordY:drawLastPoint.y];
+        [self.delegate drawingContinueWithTool:self.tool andSize:self.sizeBrush andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:drawLastPoint.x andCoordY:drawLastPoint.y];
         
         drawLastPoint = currentPoint;
 	}
@@ -176,7 +176,7 @@
         
         UIGraphicsEndImageContext();
         
-        //[self.delegate drawingContinueWithTool:self.tool andSize:self.sizeLine andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:currentPoint.x andCoordY:currentPoint.y];
+        [self.delegate drawingContinueWithTool:self.tool andSize:self.sizeLine andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:currentPoint.x andCoordY:currentPoint.y];
     }
     else if (self.tool == 2)
     {
@@ -201,7 +201,7 @@
         
         UIGraphicsEndImageContext();
         
-        //[self.delegate drawingContinueWithTool:self.tool andSize:self.sizeRectangle andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:currentPoint.x andCoordY:currentPoint.y];
+        [self.delegate drawingContinueWithTool:self.tool andSize:self.sizeRectangle andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:currentPoint.x andCoordY:currentPoint.y];
     }
 }
 
@@ -229,8 +229,29 @@
         
 		UIGraphicsEndImageContext();
         
-        //[self.delegate drawingEndedWithTool:self.tool andSize:self.sizeBrush andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:drawLastPoint.x andCoordY:drawLastPoint.y];
+        [self.delegate drawingEndedWithTool:self.tool andSize:self.sizeBrush andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:drawLastPoint.x andCoordY:drawLastPoint.y];
 	}
+    else if (self.tool == 0)
+    {
+        UIGraphicsBeginImageContext(self.frame.size);
+        
+		[drawImage.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        
+		CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
+		CGContextSetLineWidth(UIGraphicsGetCurrentContext(), self.sizeBrush);
+		CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), self.r/255.0, self.g/255.0, self.b/255.0, 1.0);
+        
+		CGContextMoveToPoint(UIGraphicsGetCurrentContext(), drawLastPoint.x, drawLastPoint.y);
+		CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
+		CGContextStrokePath(UIGraphicsGetCurrentContext());
+		CGContextFlush(UIGraphicsGetCurrentContext());
+        
+		drawImage.image = UIGraphicsGetImageFromCurrentImageContext();
+        
+		UIGraphicsEndImageContext();
+        
+        [self.delegate drawingEndedWithTool:self.tool andSize:self.sizeBrush andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:currentPoint.x andCoordY:currentPoint.y];
+    }
     else if (self.tool == 1)
     {
         previewImage.image = nil;
@@ -252,7 +273,7 @@
         
 		UIGraphicsEndImageContext();
         
-        //[self.delegate drawingEndedWithTool:self.tool andSize:self.sizeLine andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:currentPoint.x andCoordY:currentPoint.y];
+        [self.delegate drawingEndedWithTool:self.tool andSize:self.sizeLine andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:currentPoint.x andCoordY:currentPoint.y];
     }
     else if (self.tool == 2)
     {
@@ -278,7 +299,7 @@
         
 		UIGraphicsEndImageContext();
         
-        //[self.delegate drawingEndedWithTool:self.tool andSize:self.sizeLine andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:currentPoint.x andCoordY:currentPoint.y];
+        [self.delegate drawingEndedWithTool:self.tool andSize:self.sizeLine andColorR:self.r andColorG:self.g andColorB:self.b andCoordX:currentPoint.x andCoordY:currentPoint.y];
     }
 }
 

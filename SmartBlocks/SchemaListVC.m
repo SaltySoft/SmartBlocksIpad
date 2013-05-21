@@ -8,6 +8,9 @@
 
 #import "SchemaListVC.h"
 
+#import "DataTransferOperation.h"
+
+
 @interface SchemaListVC ()
 
 @end
@@ -39,6 +42,7 @@
 	
 	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
+    //CGRect coverFlowFrame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 44);
     
 	self.coverflow = [[TKCoverflowView alloc] initWithFrame:self.view.bounds deleclerationRate:UIScrollViewDecelerationRateFast];
 	self.coverflow.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -64,15 +68,34 @@
     [label setBackgroundColor:[UIColor clearColor]];
     [label setFont:[UIFont boldSystemFontOfSize:24]];
     [self.view addSubview:label];
+    
+    
+    
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 108, self.view.frame.size.width, 44)];
+    UIBarButtonItem *removeButton = [[UIBarButtonItem alloc] initWithTitle:@"Remove Schema" style:UIBarButtonItemStyleBordered target:self action:@selector(removeSchema:)];
+    UIBarButtonItem *flexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Add Schema" style:UIBarButtonItemStyleBordered target:self action:@selector(addSchema:)];
+    toolbar.items = [NSArray arrayWithObjects:removeButton, flexible, addButton, nil];
+    [self.view addSubview:toolbar];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
-    DownloadManager *manager = [DownloadManager downloadManagerSingleton];
-    
-    [manager addDownloadWithStringUrl:[[NSString alloc] initWithFormat:@"http://localhost/Enterprise/Schemas/?token=%@", [User getCurrentUser].token] identifier:nil delegate:self];
+    if (self.shouldReload)
+    {
+        self.shouldReload = NO;
+        
+        DownloadManager *manager = [DownloadManager downloadManagerSingleton];
+        
+        [manager addDownloadWithStringUrl:[[NSString alloc] initWithFormat:@"http://localhost/Meetings/Schemas/?token=%@", [User getCurrentUser].token] identifier:nil delegate:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,6 +109,27 @@
     self.schemas = nil;
     self.coverflow = nil;
     self.label = nil;
+}
+
+#pragma mark - IBActions
+
+- (void)removeSchema:(id)sender
+{
+    NSLog(@"removed");
+    Schema *selectedSchema = [self.schemas objectAtIndex:self.coverflow.currentCoverIndex];
+    
+    DownloadManager *downloadManager = [DownloadManager downloadManagerSingleton];
+    [downloadManager addDownloadWithStringUrl:[[NSString alloc] initWithFormat:@"http://localhost/Meetings/Schemas/delete/%d", selectedSchema.identitier] identifier:@"delete" delegate:self];
+    
+    [self.schemas removeObjectAtIndex:self.coverflow.currentCoverIndex];
+    [self.coverflow reloadData];
+}
+
+- (void)addSchema:(id)sender
+{
+    NSLog(@"add");
+    
+    [self performSegueWithIdentifier:@"goToAddSchemaViewSegue" sender:self];
 }
 
 #pragma mark - Tapku CoverFlow Delegate Datasource
@@ -133,35 +177,56 @@
 
 - (void)didFinishWithSender:(id)download WithData:(NSData *)data
 {
-    NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    id object = [jsonString objectFromJSONString];
+    DataTransferOperation *operation = (DataTransferOperation*)download;
     
-    if ([SVProgressHUD isVisible])
-        [SVProgressHUD dismiss];
-    
-    if ([object isKindOfClass:[NSDictionary class]])
+    if (operation.identifier == nil)
     {
-        [SVProgressHUD showErrorWithStatus:@"Vous n'êtes pas connecté"];
-        return;
+        NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        id object = [jsonString objectFromJSONString];
+        
+        if ([SVProgressHUD isVisible])
+            [SVProgressHUD dismiss];
+        
+        if ([object isKindOfClass:[NSDictionary class]])
+        {
+            [SVProgressHUD showErrorWithStatus:@"Vous n'êtes pas connecté"];
+            return;
+        }
+        
+        NSArray *array = (NSArray*)object;
+        
+        schemas = [Schema getSchemasArrayWithArray:array];
+        
+        [self.coverflow reloadData];
+        
+        label.text = [[schemas objectAtIndex:0] name];
     }
-    
-    NSArray *array = (NSArray*)object;
-    
-    schemas = [Schema getSchemasArrayWithArray:array];
-    
-    [self.coverflow reloadData];
-    
-    label.text = [[schemas objectAtIndex:0] name];
+}
+
+#pragma mark - ShouldReloadData Protocol
+
+- (void)controllerShouldReloadData
+{
+    self.shouldReload = YES;
 }
 
 #pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    Schema *schema = [schemas objectAtIndex:coverflow.currentCoverIndex];
-    DrawingVC *destinationController = (DrawingVC *)[segue destinationViewController];
-    
-    destinationController.schema = schema;
+    if ([[segue destinationViewController] isKindOfClass:[DrawingVC class]])
+    {
+        Schema *schema = [schemas objectAtIndex:coverflow.currentCoverIndex];
+        DrawingVC *destinationController = (DrawingVC *)[segue destinationViewController];
+        
+        destinationController.schema = schema;
+    }
+    else
+    {
+        AddSchemaVC *destinationController = (AddSchemaVC *)[segue destinationViewController];
+        
+        destinationController.del = self;
+    }
 }
 
 @end

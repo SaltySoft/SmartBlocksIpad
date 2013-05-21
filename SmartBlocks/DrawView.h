@@ -36,6 +36,6 @@
 
 - (void)beginPointWithCoordX:(int)x coordY:(int)y andUser:(NSString*)user;
 - (void)drawLineWithSize:(int)size coordX:(int)x coordY:(int)y colorR:(int)r colorG:(int)g colorB:(int)B andUser:(NSString*)user;
-- (void)drawRectangleWithSize:(int)size coordX:(int)x coordY:(int)y colorR:(int)r colorG:(int)g colorB:(int)b andUser:(NSString*)user;;
+- (void)drawRectangleWithSize:(int)size coordX:(int)x coordY:(int)y colorR:(int)r colorG:(int)g colorB:(int)b andUser:(NSString*)user;
 
 @end

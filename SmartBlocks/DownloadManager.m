@@ -50,17 +50,43 @@
     [downloadQueue addOperation:download];
 }
 
-//EMP
-- (void)addDownload3DWithStringUrl:(NSString*)_strURL identifier:(id)_pIdentifier delegate:(id <DataTransferProtocolDelegate>)_pDelegate
+- (void)addUploadWithStringUrl:(NSString *)url
+                    identifier:(id)identifier
+                      delegate:(id <DataTransferProtocolDelegate>)del
+                    dictionary:(NSMutableDictionary *)dico
 {
-    NSURLRequest* pRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:_strURL] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
-    DataTransferOperation* pDataTransferOperation = [[DataTransferOperation alloc] initWithRequest:pRequest identifier:_pIdentifier delegate:self];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSString *stringBoundary = @"0xKhTmLbOuNdArY";
+    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",stringBoundary];
     
-    connectivity = YES;
-    [operationDictionary setObject:_pDelegate forKey:pDataTransferOperation];
-    [m_pDownloadQueue3D addOperation:pDataTransferOperation];
+    [request setHTTPMethod:@"POST"];
+    [request addValue:contentType forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:[DownloadManager createPostBodyWithDictionary:dico]];
+    
+    DataTransferOperation *upload = [[DataTransferOperation alloc] initWithRequest:request identifier:identifier delegate:self];
+    
+    [operationDictionary setObject:del forKey:upload];
+    [downloadQueue addOperation:upload];
 }
-//END EMP
+
+- (void)addUploadWithStringUrl:(NSString *)url
+                    identifier:(id)identifier
+                      delegate:(id <DataTransferProtocolDelegate>)del
+                    data:(NSData *)data
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSString *contentType = @"text/html";
+    
+    [request setHTTPMethod:@"POST"];
+    [request addValue:contentType forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:data];
+    [request setValue:[NSString stringWithFormat:@"%d", [data length]] forHTTPHeaderField:@"Content-Length"];
+    
+    DataTransferOperation *upload = [[DataTransferOperation alloc] initWithRequest:request identifier:identifier delegate:self];
+    
+    [operationDictionary setObject:del forKey:upload];
+    [downloadQueue addOperation:upload];
+}
 
 #pragma mark - call functions
 
@@ -122,6 +148,39 @@
         UIAlertView *alerts = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Problème de connectivité",) message:errmsg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alerts show];
     }
+}
+
++ (NSData *)createPostBodyWithDictionary:(NSMutableDictionary *)dico
+{
+    const NSString *stringBoundary = @"0xKhTmLbOuNdArY";
+    NSMutableData *postBody = [NSMutableData data];
+    
+    [postBody appendData:[[NSString stringWithFormat:@"--%@",stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    for(NSString *aKey in dico)
+    {
+        //NSLog(@"Key: %@", aKey);
+        [postBody appendData:[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+        if ([[dico valueForKey:aKey] isKindOfClass:[NSString class]])
+        {
+            //NSLog(@"this is a string");
+            [postBody appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n", aKey] dataUsingEncoding:NSUTF8StringEncoding]];
+            [postBody appendData:[[dico valueForKey:aKey] dataUsingEncoding:NSUTF8StringEncoding]];
+        }
+        else
+        {
+            //NSLog(@"this is a data");
+            [postBody appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@.jpg\"\r\n\r\n", aKey, aKey] dataUsingEncoding:NSUTF8StringEncoding]];
+            [postBody appendData:[NSData dataWithData:[dico valueForKey:aKey]]];
+        }
+        [postBody appendData:[[NSString stringWithFormat:@"\r\n--%@", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    }
+    
+    [postBody appendData:[@"--\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    //NSLog(@"%@", postBody);
+    
+    return postBody;
 }
 
 @end

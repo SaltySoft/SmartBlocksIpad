@@ -10,9 +10,13 @@
 
 #import "DrawView.h"
 #import "Schema.h"
+#import "User.h"
+#import "SRWebSocket.h"
+#import "JSONKit.h"
+#import "DownloadManager.h"
 #import "ILColorPickerDualExampleController.h"
 
-@interface DrawingVC : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, ColorPickedProtocol, DrawingProtocol>
+@interface DrawingVC : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, ColorPickedProtocol, DrawingProtocol, SRWebSocketDelegate, DataTransferProtocolDelegate>
 
 @property (nonatomic, strong) NSMutableArray                        *brushSizesArray;
 @property (nonatomic, strong) Schema                                *schema;
@@ -24,6 +28,7 @@
 @property (nonatomic, strong) DrawView                              *drawView;
 @property (nonatomic, strong) ILColorPickerDualExampleController    *colorPicker;
 @property (nonatomic, strong) UIPopoverController                   *popController;
+@property (nonatomic, strong) SRWebSocket                           *webSocket;
 
 - (IBAction)SizeTapped:(id)sender;
 - (IBAction)PickerDone:(id)sender;

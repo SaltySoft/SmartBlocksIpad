@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821050ED173FEDEB00753538 /* AddSchemaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 821050EC173FEDEB00753538 /* AddSchemaVC.m */; };
 		822DEE0D172810FD009F9B53 /* Schema.m in Sources */ = {isa = PBXBuildFile; fileRef = 822DEE0C172810FD009F9B53 /* Schema.m */; };
 		822DEE101728153A009F9B53 /* SchemaText.m in Sources */ = {isa = PBXBuildFile; fileRef = 822DEE0F1728153A009F9B53 /* SchemaText.m */; };
 		8233F7BC17316D90009CA9DC /* DrawingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7BB17316D90009CA9DC /* DrawingVC.m */; };
@@ -18,6 +19,12 @@
 		8233F7D317316ED3009CA9DC /* ILColorPickerDualExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7CB17316ED3009CA9DC /* ILColorPickerDualExampleController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8233F7D417316ED3009CA9DC /* ILColorPickerDualExampleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8233F7CC17316ED3009CA9DC /* ILColorPickerDualExampleController.xib */; };
 		8233F7D9173172A6009CA9DC /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7D8173172A6009CA9DC /* DrawView.m */; };
+		8233F7E11731CD4C009CA9DC /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7DB1731CD4C009CA9DC /* base64.c */; };
+		8233F7E21731CD4C009CA9DC /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7DE1731CD4C009CA9DC /* NSData+SRB64Additions.m */; };
+		8233F7E31731CD4C009CA9DC /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8233F7E01731CD4C009CA9DC /* SRWebSocket.m */; };
+		8233F7E51731D563009CA9DC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8233F7E41731D563009CA9DC /* Security.framework */; };
+		8233F7E91731D59B009CA9DC /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8233F7E81731D59A009CA9DC /* libicucore.dylib */; };
+		8233F7EB1731D5AB009CA9DC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8233F7EA1731D5AB009CA9DC /* CFNetwork.framework */; };
 		8245EC21172969AA00A95E2A /* NSData+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8245EC20172969AA00A95E2A /* NSData+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		82546075172C31F10094B67C /* SchemaListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 82546074172C31F10094B67C /* SchemaListVC.m */; };
 		8254607E172C34980094B67C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8254607D172C34980094B67C /* OpenGLES.framework */; };
@@ -70,6 +77,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		821050EB173FEDEB00753538 /* AddSchemaVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSchemaVC.h; sourceTree = "<group>"; };
+		821050EC173FEDEB00753538 /* AddSchemaVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSchemaVC.m; sourceTree = "<group>"; };
+		821051051740AD1200753538 /* ShouldReloadDataProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShouldReloadDataProtocol.h; sourceTree = "<group>"; };
 		822DEE0B172810FD009F9B53 /* Schema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schema.h; sourceTree = "<group>"; };
 		822DEE0C172810FD009F9B53 /* Schema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schema.m; sourceTree = "<group>"; };
 		822DEE0E1728153A009F9B53 /* SchemaText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemaText.h; sourceTree = "<group>"; };
@@ -93,6 +103,16 @@
 		8233F7CD17316ED3009CA9DC /* ColorPickedProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickedProtocol.h; sourceTree = "<group>"; };
 		8233F7D7173172A6009CA9DC /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		8233F7D8173172A6009CA9DC /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		8233F7DB1731CD4C009CA9DC /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		8233F7DC1731CD4C009CA9DC /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		8233F7DD1731CD4C009CA9DC /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		8233F7DE1731CD4C009CA9DC /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		8233F7DF1731CD4C009CA9DC /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		8233F7E01731CD4C009CA9DC /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		8233F7E41731D563009CA9DC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8233F7E61731D57E009CA9DC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8233F7E81731D59A009CA9DC /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		8233F7EA1731D5AB009CA9DC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8245EC1F172969AA00A95E2A /* NSData+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Additions.h"; sourceTree = "<group>"; };
 		8245EC20172969AA00A95E2A /* NSData+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Additions.m"; sourceTree = "<group>"; };
 		8245EC41172C1F1F00A95E2A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -140,6 +160,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8233F7EB1731D5AB009CA9DC /* CFNetwork.framework in Frameworks */,
+				8233F7E91731D59B009CA9DC /* libicucore.dylib in Frameworks */,
+				8233F7E51731D563009CA9DC /* Security.framework in Frameworks */,
 				825460B2172FCB760094B67C /* MapKit.framework in Frameworks */,
 				825460B0172FCB6A0094B67C /* libTapkuLibrary.a in Frameworks */,
 				8254607E172C34980094B67C /* OpenGLES.framework in Frameworks */,
@@ -157,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				8233F7BF17316E83009CA9DC /* DrawingProtocol.h */,
+				821051051740AD1200753538 /* ShouldReloadDataProtocol.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -191,6 +215,19 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		8233F7DA1731CD38009CA9DC /* WebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				8233F7DB1731CD4C009CA9DC /* base64.c */,
+				8233F7DC1731CD4C009CA9DC /* base64.h */,
+				8233F7DD1731CD4C009CA9DC /* NSData+SRB64Additions.h */,
+				8233F7DE1731CD4C009CA9DC /* NSData+SRB64Additions.m */,
+				8233F7DF1731CD4C009CA9DC /* SRWebSocket.h */,
+				8233F7E01731CD4C009CA9DC /* SRWebSocket.m */,
+			);
+			name = WebSocket;
+			sourceTree = "<group>";
+		};
 		825460A5172FCB400094B67C /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +257,10 @@
 		82D86E721726A5110042F679 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8233F7EA1731D5AB009CA9DC /* CFNetwork.framework */,
+				8233F7E81731D59A009CA9DC /* libicucore.dylib */,
+				8233F7E61731D57E009CA9DC /* SystemConfiguration.framework */,
+				8233F7E41731D563009CA9DC /* Security.framework */,
 				825460B1172FCB760094B67C /* MapKit.framework */,
 				825460A3172FCB400094B67C /* TapkuLibrary.bundle */,
 				825460A4172FCB400094B67C /* TapkuLibrary.xcodeproj */,
@@ -287,6 +328,8 @@
 				82546074172C31F10094B67C /* SchemaListVC.m */,
 				8233F7BA17316D90009CA9DC /* DrawingVC.h */,
 				8233F7BB17316D90009CA9DC /* DrawingVC.m */,
+				821050EB173FEDEB00753538 /* AddSchemaVC.h */,
+				821050EC173FEDEB00753538 /* AddSchemaVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -336,6 +379,7 @@
 		82D86EDF1726BFC10042F679 /* Librairies */ = {
 			isa = PBXGroup;
 			children = (
+				8233F7DA1731CD38009CA9DC /* WebSocket */,
 				8233F7D517316EDA009CA9DC /* Color Picker */,
 				82D86EBD1726B5670042F679 /* Json */,
 				82D86ED71726BE8F0042F679 /* SVProgressHUD */,
@@ -457,6 +501,10 @@
 				8233F7D217316ED3009CA9DC /* ILColorPickerView.m in Sources */,
 				8233F7D317316ED3009CA9DC /* ILColorPickerDualExampleController.m in Sources */,
 				8233F7D9173172A6009CA9DC /* DrawView.m in Sources */,
+				8233F7E11731CD4C009CA9DC /* base64.c in Sources */,
+				8233F7E21731CD4C009CA9DC /* NSData+SRB64Additions.m in Sources */,
+				8233F7E31731CD4C009CA9DC /* SRWebSocket.m in Sources */,
+				821050ED173FEDEB00753538 /* AddSchemaVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

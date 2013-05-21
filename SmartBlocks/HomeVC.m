@@ -11,6 +11,7 @@
 #import "JSONKit.h"
 #import "User.h"
 #import "SVProgressHUD.h"
+#import "SchemaListVC.h"
 
 @interface HomeVC ()
 
@@ -119,8 +120,19 @@
         user.session_id = [dico objectForKey:@"session_id"];
         user.token = [dico objectForKey:@"token"];
         
+        [self.usernameTextField resignFirstResponder];
+        [self.passwordTextField resignFirstResponder];
         [self performSegueWithIdentifier:@"connexionSegue" sender:self];
     }
+}
+
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    SchemaListVC *destinationController = (SchemaListVC *)[segue destinationViewController];
+    
+    destinationController.shouldReload = YES;
 }
 
 @end

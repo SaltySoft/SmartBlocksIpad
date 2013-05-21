@@ -10,6 +10,7 @@
 #import <TapkuLibrary.h>
 
 #import "DownloadManager.h"
+#import "AddSchemaVC.h"
 #import "JSONKit.h"
 #import "Schema.h"
 #import "SchemaText.h"
@@ -17,7 +18,9 @@
 #import "SVProgressHUD.h"
 #import "DrawingVC.h"
 
-@interface SchemaListVC : UIViewController <DataTransferProtocolDelegate, TKCoverflowViewDataSource, TKCoverflowViewDelegate>
+@interface SchemaListVC : UIViewController <DataTransferProtocolDelegate, TKCoverflowViewDataSource, TKCoverflowViewDelegate, ShouldReloadDataProtocol>
+
+@property (nonatomic) BOOL                      shouldReload;
 
 @property (nonatomic, strong) NSMutableArray    *schemas;
 @property (nonatomic, strong) TKCoverflowView   *coverflow;

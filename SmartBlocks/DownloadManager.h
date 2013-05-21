@@ -21,8 +21,15 @@
                       identifier:(id)identifier
                         delegate:(id <DataTransferProtocolDelegate>)del;
 
-//EMP
-- (void)addDownload3DWithStringUrl:(NSString*)_strURL identifier:(id)_pIdentifier delegate:(id <DataTransferProtocolDelegate>)_pDelegate;
+- (void)addUploadWithStringUrl:(NSString *)url
+                    identifier:(id)identifier
+                      delegate:(id <DataTransferProtocolDelegate>)del
+                    dictionary:(NSMutableDictionary *)dico;
+
+- (void)addUploadWithStringUrl:(NSString *)url
+                    identifier:(id)identifier
+                      delegate:(id <DataTransferProtocolDelegate>)del
+                          data:(NSData *)data;
 
 - (void)cancelAllDownload;
 - (void)pauseDownloadQueue;
